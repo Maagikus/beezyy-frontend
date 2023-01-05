@@ -3,9 +3,9 @@ import TwoFactorAuth from "../TwoFactorAuth/TwoFactorAuth"
 import Login from './Login'
 import Registration from './Registration'
 const LoginForm = () => {
-    const [confirmPassword,setConfirmPassword] = useState(false)
-    const [email, setEmail] = useState('')
-    const [checkBoxValue, setCheckBoxValue]= useState(false)
+	const [confirmPassword, setConfirmPassword] = useState(false)
+	const [email, setEmail] = useState('')
+	const [checkBoxValue, setCheckBoxValue] = useState(false)
 	const [password, setPassword] = useState('')
 	const [emailError, setEmailError] = useState(false)
 	const [passwordError, setPasswordError] = useState(false)
@@ -14,23 +14,23 @@ const LoginForm = () => {
 	const [passwordDirty, setPasswordDirty] = useState(true)
 	const [loginError, setLoginError] = useState('')
 	const [formValid, setFormValid] = useState(false)
-    const [chosenElement, setChosenElement] = useState(false)
-   
-    useEffect(() => {
+	const [chosenElement, setChosenElement] = useState(false)
+
+	useEffect(() => {
 		if (emailError || passwordError || confirmPasswordError) {
 			setFormValid(false)
 		} else {
 			setFormValid(true)
 		}
 	}, [emailError, passwordError])
-    const isEmailValid = (e) => {
+	const isEmailValid = (e) => {
 		setEmail(e.target.value)
 		const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 		if (!EMAIL_REGEXP.test(e.target.value)) {
 			setEmailError(true)
 		} else {
 			setEmailError(false)
-            setPasswordDirty(false)
+			setPasswordDirty(false)
 		}
 	}
 	const isPasswordlValid = (e) => {
@@ -44,14 +44,14 @@ const LoginForm = () => {
 			setPasswordError(false)
 		}
 	}
-    const isPasswordSame = (e) =>{
-        setConfirmPassword(e.target.value)
-        if(e.target.value===password){
-            setConfirmPasswordError(false)
-        }else{
-            setConfirmPasswordError(true)
-        }
-    }
+	const isPasswordSame = (e) => {
+		setConfirmPassword(e.target.value)
+		if (e.target.value === password) {
+			setConfirmPasswordError(false)
+		} else {
+			setConfirmPasswordError(true)
+		}
+	}
 	const onBlure = (e) => {
 		switch (e.target.name) {
 			case 'email':
@@ -65,72 +65,71 @@ const LoginForm = () => {
 				break;
 		}
 	}
-	const onsubmit =  (e) => {
+	const onsubmit = (e) => {
 		e.preventDefault()
-       return (
-           <TwoFactorAuth/>
-       )
+		return (
+			<TwoFactorAuth />
+		)
 	}
-    const renderChosenElement = (e) => {
-        if(e.target.dataset.login){
-            setChosenElement(false)
-        }else{
-            setChosenElement(true)
-        }
+	const renderChosenElement = (e) => {
+		if (e.target.dataset.login) {
+			setChosenElement(false)
+		} else {
+			setChosenElement(true)
+		}
 
-    }
+	}
 
-    return (
-        onsubmit
-        ?
-        <TwoFactorAuth/>
-        :
-        <div className="from__content">
-            <div className="from__header header-form">
-                <div  className="header-form__buttons">
-                    <div data-login onClick={(e)=>renderChosenElement(e)} className={chosenElement?"header-form__link":"header-form__link active"}>SIGN IN</div>
-                    <div data-registration onClick={(e)=>renderChosenElement(e)} className={chosenElement?"header-form__link active":"header-form__link "}>SIGN UP</div>
-                </div>
-                <div className="header-form__language">
-                    <div className="language _icon-big-hexagon"> <span>RU</span> </div>
-                    <div className="language _icon-big-hexagon"> <span>EN</span> </div>
-                    <div className="language _icon-big-hexagon"> <span>PL</span> </div>
-                </div> 
-            </div>
-            {chosenElement
-            ?
-            <Registration
-                onsubmit={onsubmit}
-                onBlure={onBlure}
-                isEmailValid={isEmailValid}
-                email={email}
-                emailError={emailError}
-                isPasswordlValid={isPasswordlValid}
-                password={password}
-                passwordError={passwordError}
-                checkBoxValue={checkBoxValue}
-                setCheckBoxValue={setCheckBoxValue}
-                formValid={formValid}
-                isPasswordSame={isPasswordSame}
-                confirmPassword={confirmPassword}
-                confirmPasswordError={confirmPasswordError}
-            />
-            :
-            <Login
-                onsubmit={onsubmit}
-                onBlure={onBlure}
-                isEmailValid={isEmailValid}
-                email={email}
-                emailError={emailError}
-                isPasswordlValid={isPasswordlValid}
-                password={password}
-                passwordError={passwordError}
-                checkBoxValue={checkBoxValue}
-                setCheckBoxValue={setCheckBoxValue}
-                formValid={formValid}
-            />}
-         
-            {/* <div className="from__body body-form">
+	return (
+
+		//   <TwoFactorAuth/>
+
+		<div className="from__content">
+			<div className="from__header header-form">
+				<div className="header-form__buttons">
+					<div data-login onClick={(e) => renderChosenElement(e)} className={chosenElement ? "header-form__link" : "header-form__link active"}>SIGN IN</div>
+					<div data-registration onClick={(e) => renderChosenElement(e)} className={chosenElement ? "header-form__link active" : "header-form__link "}>SIGN UP</div>
+				</div>
+				<div className="header-form__language">
+					<div className="language _icon-big-hexagon"> <span>RU</span> </div>
+					<div className="language _icon-big-hexagon"> <span>EN</span> </div>
+					<div className="language _icon-big-hexagon"> <span>PL</span> </div>
+				</div>
+			</div>
+			{chosenElement
+				?
+				<Registration
+					onsubmit={onsubmit}
+					onBlure={onBlure}
+					isEmailValid={isEmailValid}
+					email={email}
+					emailError={emailError}
+					isPasswordlValid={isPasswordlValid}
+					password={password}
+					passwordError={passwordError}
+					checkBoxValue={checkBoxValue}
+					setCheckBoxValue={setCheckBoxValue}
+					formValid={formValid}
+					isPasswordSame={isPasswordSame}
+					confirmPassword={confirmPassword}
+					confirmPasswordError={confirmPasswordError}
+				/>
+				:
+				<Login
+					onsubmit={onsubmit}
+					onBlure={onBlure}
+					isEmailValid={isEmailValid}
+					email={email}
+					emailError={emailError}
+					isPasswordlValid={isPasswordlValid}
+					password={password}
+					passwordError={passwordError}
+					checkBoxValue={checkBoxValue}
+					setCheckBoxValue={setCheckBoxValue}
+					formValid={formValid}
+				/>}
+
+			{/* <div className="from__body body-form">
                 <form onSubmit={(e) => onsubmit(e)}  action="#" className="body-form__form" >
                     <div className="body-form__item">
                         <label className="body-form__lable" htmlFor="email">E-mail</label>
@@ -175,7 +174,7 @@ const LoginForm = () => {
                         </div>
                 </div>
             </div> */}
-        </div>
-    )
+		</div>
+	)
 }
 export default LoginForm
