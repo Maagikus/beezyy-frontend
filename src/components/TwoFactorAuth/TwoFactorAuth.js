@@ -43,7 +43,7 @@ const TwoFactorAuth = () => {
 								code.map((item, index) => {
 									return (
 										<div className={code[index].length ? "body-auth__item active " : "body-auth__item  "} key={index} >
-											<input value={code[index]} onKeyDown={e => onKeyDown(e, index)} ref={index === activeIndex ? inputRef : null} onChange={e => onChange(e)} autoComplete="off" type="text" name="Form[]" data-error="Ошибка" placeholder="1" className="body-auth__input  input" />
+											<input value={code[index]} onKeyDown={e => onKeyDown(e, index)} ref={index === activeIndex ? inputRef : null} onChange={e => onChange(e)} autoComplete="off" type="text" name="Form[]" data-error="Ошибка" placeholder={index + 1} className="body-auth__input  input" />
 											<label htmlFor="Form[]" className="body-auth__lable _icon-big-hexagon"></label>
 										</div>
 									)

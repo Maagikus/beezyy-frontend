@@ -52,8 +52,8 @@ const Registration = (
 			<div className="from__footer footer-form">
 				<div className="footer-form__info">
 					<div className="footer-form__title">
-						By registering, you accept our <span>Terms of use</span> and <span>Privacy
-							Policy</span>
+						By registering, you accept our <a href="#">Terms of use</a> and <a href="#">Privacy
+							Policy</a>
 					</div>
 					<div className={checkBoxValue ? "footer-form__checkbox checkbox active" : "footer-form__checkbox checkbox "}>
 						<input checked={checkBoxValue} onChange={() => setCheckBoxValue(!checkBoxValue)} id="c_2" data-error="Ошибка" className="checkbox__input" type="checkbox" value="1" name="form[]" />

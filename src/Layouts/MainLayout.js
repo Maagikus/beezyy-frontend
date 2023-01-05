@@ -1,3 +1,4 @@
+import TwoFactorAuth from '../components/TwoFactorAuth/TwoFactorAuth'
 import background from '../img/background/background.jpg'
 const MainLayout = ({ element }) => {
 	return (
@@ -7,6 +8,7 @@ const MainLayout = ({ element }) => {
 					<div className="from__container">
 						<div className="from__wrapper">
 							{element}
+							<TwoFactorAuth />
 						</div>
 					</div>
 					<div className="from__image-ibg"><img src={background} alt="background" /></div>

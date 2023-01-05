@@ -1,6 +1,5 @@
 const Login = (
 	{ onsubmit,
-		onBlure,
 		isEmailValid,
 		email,
 		emailError,
@@ -18,7 +17,6 @@ const Login = (
 					<div className="body-form__item">
 						<label className="body-form__lable" htmlFor="email">E-mail</label>
 						<input
-							onBlur={e => onBlure(e)}
 							onChange={e => isEmailValid(e)}
 							value={email}
 							autoComplete="off" type="text" name="email" data-error="Ошибка" placeholder="Enter your e-mail"
@@ -27,7 +25,6 @@ const Login = (
 					<div className="body-form__item">
 						<label className="body-form__lable" htmlFor="password">Password</label>
 						<input
-							onBlur={e => onBlure(e)}
 							onChange={e => isPasswordlValid(e)}
 							value={password}
 							autoComplete="off" type="password" name="password" data-error="Ошибка" placeholder="Enter your password"
