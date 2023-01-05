@@ -1326,8 +1326,8 @@ input::placeholder {
 		font-size: 0.5625rem;
 	}
 
-	.no-webp .from {
-		background: url("../src/img/background/mobile-background.png") 0 100px no-repeat;
+	.from {
+		background: url(./img/background/mobile-background.png) 0 100px no-repeat;
 	}
 
 	.from__container {
@@ -1363,8 +1363,8 @@ input::placeholder {
 }
 
 @media (max-width: 47.99875em) {
-	.webp .from {
-		background: url(../src/img/background/mobile-background.webp) 0 100px no-repeat;
+	.from {
+		background: url(./img/background/mobile-background.webp) 0 100px no-repeat;
 	}
 }
 .input:focus {

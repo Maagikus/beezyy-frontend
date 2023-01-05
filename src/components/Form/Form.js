@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import TwoFactorAuth from "../TwoFactorAuth/TwoFactorAuth"
 import Login from './Login'
 import Registration from './Registration'
-const LoginForm = () => {
+const Form = () => {
 	const [confirmPassword, setConfirmPassword] = useState('')
 	const [email, setEmail] = useState('')
 	const [checkBoxValue, setCheckBoxValue] = useState(false)
@@ -111,4 +111,4 @@ const LoginForm = () => {
 		</div>
 	)
 }
-export default LoginForm
+export default Form
