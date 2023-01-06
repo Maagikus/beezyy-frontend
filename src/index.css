@@ -1368,6 +1368,10 @@ input::placeholder {
 		background: url(./img/background/mobile-background.webp) 0 100px no-repeat;
 	}
 }
+.input{
+	border: 2px solid transparent;
+	
+}
 .input:focus {
 	border: 2px solid #f7a72e;
 }
