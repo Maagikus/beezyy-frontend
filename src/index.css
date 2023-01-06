@@ -1380,15 +1380,16 @@ input::placeholder {
 		text-decoration: underline;
 	}
 }
+.from {
+		background: url(./img/background/background.webp) 0 75px no-repeat;
+	}
 
 @media (max-width: 47.99875em) {
 	.from {
 		background: url(./img/background/mobile-background.webp) 0 190px no-repeat;
 	}
 }
-.from {
-		background: url(./img/background/background.webp) 0 75px no-repeat;
-	}
+
 .body-form__input.input {
 	border: 2px solid transparent;
 	
