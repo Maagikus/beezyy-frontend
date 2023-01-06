@@ -634,7 +634,9 @@ input::placeholder {
 	padding: 31px 20px 97px 50px;
 }
 @media (max-width: 376px) {
+.from__content {
 	padding: 31px 20px 97px 20px;
+}
 }
 
 /* @supports (padding-left: clamp(1.25rem, -0.5511695906rem + 9.0058479532vw, 6.0625rem)) {
