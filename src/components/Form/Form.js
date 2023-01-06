@@ -72,7 +72,7 @@ const Form = () => {
 				</div>
 				<div className="header-form__language">
 					<div className="language _icon-big-hexagon"> <span>RU</span> </div>
-					<div className="language _icon-big-hexagon"> <span>EN</span> </div>
+					<div className="language _icon-big-hexagon active"> <span>EN</span> </div>
 					<div className="language _icon-big-hexagon"> <span>PL</span> </div>
 				</div>
 			</div>
