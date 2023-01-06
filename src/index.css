@@ -1387,7 +1387,7 @@ input::placeholder {
 	}
 }
 .from {
-		background: url(./img/background/mobile-background.webp) 0 190px no-repeat;
+		background: url(./img/background/background.webp) 0 190px no-repeat;
 	}
 .body-form__input.input {
 	border: 2px solid transparent;
