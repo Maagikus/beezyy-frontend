@@ -55,7 +55,7 @@ const Registration = (
 						By registering, you accept our <a href="#">Terms of use</a> and <a href="#">Privacy
 							Policy</a>
 					</div>
-					<div className={checkBoxValue ? "footer-form__checkbox checkbox active" : "footer-form__checkbox checkbox "}>
+					<div onClick={()=>setCheckBoxValue(!checkBoxValue) } className={checkBoxValue ? "footer-form__checkbox checkbox active" : "footer-form__checkbox checkbox "}>
 						<input checked={checkBoxValue} onChange={() => setCheckBoxValue(!checkBoxValue)} id="c_2" data-error="Ошибка" className="checkbox__input" type="checkbox" value="1" name="form[]" />
 						<label htmlFor="c_2" className="checkbox__label _icon-little-hexagon"></label>
 					</div>
