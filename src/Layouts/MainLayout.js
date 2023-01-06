@@ -11,7 +11,7 @@ const MainLayout = ({ element }) => {
 							<TwoFactorAuth />
 						</div>
 					</div>
-// 					<div className="from__image-ibg"><img src={background} alt="background" /></div>
+
 				</div>
 
 			</main>
