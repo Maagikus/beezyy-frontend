@@ -484,6 +484,7 @@ input::placeholder {
 @media (max-width: 48em) {
 	.language::after {
 	top:1px;
+	left:0px;
 	}
 }
 @supports (font-size: clamp(1.5625rem, 1.0712719298rem + 2.4561403509vw, 2.875rem)) {
