@@ -35,7 +35,7 @@ const Login = (
 						<div className={checkBoxValue ? "item-checkbox__checkbox checkbox active" : "item-checkbox__checkbox checkbox"}>
 							<input checked={checkBoxValue} onChange={() => setCheckBoxValue(!checkBoxValue)} id="c_1" data-error="Ошибка" className="checkbox__input" type="checkbox" value="1" name="form[]" />
 							<label htmlFor="c_1" className="checkbox__label _icon-little-hexagon"><span
-								className="checkbox__text">No</span></label>
+								className="checkbox__text">{checkBoxValue?'Yes':'No'}</span></label>
 						</div>
 					</div>
 					<button disabled={!formValid} type="submit" className={formValid ? "body-form__button button" : "body-form__button button button-disable"}>SIGN IN</button>
