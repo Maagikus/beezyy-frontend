@@ -481,7 +481,11 @@ input::placeholder {
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
-
+@media (max-width: 48em) {
+	.language::after {
+	top:1px;
+	}
+}
 @supports (font-size: clamp(1.5625rem, 1.0712719298rem + 2.4561403509vw, 2.875rem)) {
 	.language::after {
 		font-size: clamp(1.5625rem, 1.0712719298rem + 2.4561403509vw, 2.875rem);
