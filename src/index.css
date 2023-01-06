@@ -231,6 +231,7 @@ input::placeholder {
 }
 
 .checkbox {
+	cursor:pointer;
 	position: relative;
 	padding: 7px 0.5rem;
 	background: rgba(255, 255, 255, 0.85);
