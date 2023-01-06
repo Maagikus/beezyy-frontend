@@ -631,14 +631,17 @@ input::placeholder {
 	background: rgba(0, 0, 0, 0.07);
 	border-left: 5px solid rgba(251, 189, 0, 0.8);
 	border-radius: 20px;
-	padding: 31px 20px 97px 51px;
+	padding: 31px 20px 97px 50px;
+}
+@media (max-width: 376px) {
+	padding: 31px 20px 97px 20px;
 }
 
-@supports (padding-left: clamp(1.25rem, -0.5511695906rem + 9.0058479532vw, 6.0625rem)) {
+/* @supports (padding-left: clamp(1.25rem, -0.5511695906rem + 9.0058479532vw, 6.0625rem)) {
 	.from__content {
 		padding-left: clamp(1.25rem, -0.5511695906rem + 9.0058479532vw, 6.0625rem);
 	}
-}
+} */
 
 @supports not (padding-left: clamp(1.25rem, -0.5511695906rem + 9.0058479532vw, 6.0625rem)) {
 	.from__content {
