@@ -1,4 +1,4 @@
-import TwoFactorAuth from '../components/TwoFactorAuth/TwoFactorAuth'
+import TwoFactorAuth from '../components/CodeDigital/CodeDigital'
 
 const MainLayout = ({ form }) => {
 	return (
