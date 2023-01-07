@@ -1387,7 +1387,7 @@ input::placeholder {
 
 @media (max-width: 47.99875em) {
 	.form {
-		background: url(./img/background/mobile-background.webp) 0 190px no-repeat;
+		background: url(./img/background/mobile-background.webp) 0 180px no-repeat;
 	}
 }
 .body-form__input {
