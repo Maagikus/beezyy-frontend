@@ -28,7 +28,7 @@ const TwoFactorAuth = () => {
 		inputRef.current?.focus()
 	}, [activeIndex])
 	return (
-		<div className="from__auth auth">
+		<div className="form__auth auth">
 			<div className="auth__content">
 				<div className="auth__header header-auth">
 					<h2 className="header-auth__title">TWO-FACTOR AUTHENTICATION</h2>

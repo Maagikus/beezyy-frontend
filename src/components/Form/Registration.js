@@ -15,7 +15,7 @@ const Registration = (
 	}) => {
 	return (
 		<>
-			<div className="from__body body-form">
+			<div className="form__body body-form">
 				<form onSubmit={(e) => onsubmit(e)} action="#" className="body-form__form" >
 					<div className="body-form__item">
 						<label className="body-form__lable" htmlFor="email">E-mail</label>
@@ -49,14 +49,14 @@ const Registration = (
 					{!formValid ? <div className="body-form__error">Incorrect e-mail or password</div> : null}
 				</form>
 			</div>
-			<div className="from__footer footer-form">
+			<div className="form__footer footer-form">
 				<div className="footer-form__info">
 					<div className="footer-form__title">
 						By registering, you accept our <a href="#">Terms of use</a> and <a href="#">Privacy
 							Policy</a>
 					</div>
 					<div onClick={()=>setCheckBoxValue(!checkBoxValue) } className={checkBoxValue ? "footer-form__checkbox checkbox active" : "footer-form__checkbox checkbox "}>
-						<input checked={checkBoxValue} onChange={() => setCheckBoxValue(!checkBoxValue)} id="c_2" data-error="Ошибка" className="checkbox__input" type="checkbox" value="1" name="form[]" />
+						<input defaultChecked={checkBoxValue} onInput={() => setCheckBoxValue(!checkBoxValue)} id="c_2" data-error="Ошибка" className="checkbox__input" type="checkbox" value="1" name="form[]" />
 						<label htmlFor="c_2" className="checkbox__label _icon-little-hexagon"></label>
 					</div>
 				</div>

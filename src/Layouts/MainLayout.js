@@ -1,21 +1,18 @@
 import TwoFactorAuth from '../components/TwoFactorAuth/TwoFactorAuth'
-import background from '../img/background/background.jpg'
-const MainLayout = ({ element }) => {
+
+const MainLayout = ({ form }) => {
 	return (
 		<div className="wrapper">
 			<main className="page">
-				<div className="from">
-					<div className="from__container">
-						<div className="from__wrapper">
-							{element}
+				<div className="form">
+					<div className="form__container">
+						<div className="form__wrapper">
+							{form}
 							<TwoFactorAuth />
 						</div>
 					</div>
-
 				</div>
-
 			</main>
-
 		</div>
 	)
 }

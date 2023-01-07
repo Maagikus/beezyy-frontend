@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import TwoFactorAuth from "../TwoFactorAuth/TwoFactorAuth"
 import Login from './Login'
 import Registration from './Registration'
 const Form = () => {
@@ -10,9 +9,6 @@ const Form = () => {
 	const [emailError, setEmailError] = useState(false)
 	const [passwordError, setPasswordError] = useState(false)
 	const [confirmPasswordError, setConfirmPasswordError] = useState(false)
-
-	const [passwordDirty, setPasswordDirty] = useState(true)
-
 	const [formValid, setFormValid] = useState(false)
 	const [chosenElement, setChosenElement] = useState(false)
 
@@ -30,7 +26,6 @@ const Form = () => {
 			setEmailError(true)
 		} else {
 			setEmailError(false)
-			setPasswordDirty(false)
 		}
 	}
 	const isPasswordlValid = (e) => {
@@ -52,7 +47,6 @@ const Form = () => {
 			setConfirmPasswordError(true)
 		}
 	}
-
 	const onsubmit = (e) => {
 		e.preventDefault()
 	}
@@ -64,8 +58,8 @@ const Form = () => {
 		}
 	}
 	return (
-		<div className="from__content">
-			<div className="from__header header-form">
+		<div className="form__content">
+			<div className="form__header header-form">
 				<div className="header-form__buttons">
 					<div data-login onClick={(e) => renderChosenElement(e)} className={chosenElement ? "header-form__link" : "header-form__link active"}>SIGN IN</div>
 					<div data-registration onClick={(e) => renderChosenElement(e)} className={chosenElement ? "header-form__link active" : "header-form__link "}>SIGN UP</div>
@@ -80,7 +74,6 @@ const Form = () => {
 				?
 				<Registration
 					onsubmit={onsubmit}
-
 					isEmailValid={isEmailValid}
 					email={email}
 					emailError={emailError}
@@ -97,7 +90,6 @@ const Form = () => {
 				:
 				<Login
 					onsubmit={onsubmit}
-
 					isEmailValid={isEmailValid}
 					email={email}
 					emailError={emailError}
